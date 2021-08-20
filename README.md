@@ -86,12 +86,12 @@ A basic guide for how to create a new role in oasis-roles
   scenarios are mostly used for linting, as many of the OASIS roles require VMs
   to execute and test the actual automation code.
 
-  `tox -e roles-package_updater-docker -- -d podman`
+  `tox -e roles-package_updater-container -- -d podman`
 
 * If you're debugging a failure and would like to leave provisioned instances
   up to check their error state, run the following.
 
-  `tox -e roles-package_updater-docker -- -d podman --destroy never`
+  `tox -e roles-package_updater-container -- -d podman --destroy never`
 
 * To get debugging output from Ansible (`-v`) and Molecule (`--debug`), you
   must run Molecule directly since tox-ansible is not able to pass debugging
